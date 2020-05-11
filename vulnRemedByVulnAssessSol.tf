@@ -58,6 +58,21 @@ POLICY_RULE
         ],
     }
   }
+
+  resource "azure_policy_assignment" "policy"{
+    name                      = "vulnAsess-assignment"
+    scope                     = azurerm_resource_group.example.id
+    policy_definition_id      = azurerm_policy_definition.example.id
+    description               = "Policy assignment"
+
+    parameters =<<PARAMETERS
+    {
+      "allowedValues": {
+        "value": ["AuditIfNotExists"]
+      }
+    }
+
+  }
 PARAMETERS
 
 }
