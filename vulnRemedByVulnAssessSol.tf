@@ -42,6 +42,7 @@ METADATA
   }
 POLICY_RULE
 
+foo
 
   parameters = <<PARAMETERS
     {

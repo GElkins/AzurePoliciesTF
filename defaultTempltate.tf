@@ -44,4 +44,5 @@ POLICY_RULE
   }
 PARAMETERS
 
+foo
 }
